@@ -1,0 +1,9 @@
+# Dataset artifacts are distributed through GitHub Releases, never Git history.
+*.zip
+*.zip.part-*
+*.tar
+*.tar.gz
+*.csv
+/data/
+/dataset/
+/release-prep/
