@@ -31,7 +31,7 @@ This repository does not infer labels, challenge task definitions, evaluation ru
 - CSV count: 120
 - Partition count: 24
 
-The repository's [SHA256SUMS](../checksums/SHA256SUMS) contains the expected SHA256 for the source ZIP and each prepared part. The planned Release will attach the two part files and a copy of this checksum manifest. Release publication is pending confirmation of authorization to disclose the infrastructure identifiers present in the data.
+The repository's [SHA256SUMS](../checksums/SHA256SUMS) contains the expected SHA256 for the source ZIP and each prepared part. The two numbered parts and a copy of this checksum manifest are available from the [phase-two-v1.0 GitHub Release](https://github.com/RyanQT7/CCF-AIOps-Challenge-2026-Dataset/releases/tag/phase-two-v1.0).
 
 ## Download, merge, and validation
 
@@ -67,4 +67,4 @@ The partition filenames contain site and time-window metadata. They are represen
 
 ## Distribution status
 
-The planned release is titled **CCF AIOps Challenge 2026 - Phase Two Dataset** and uses tag `phase-two-v1.0`. It has not been published because explicit public-disclosure authorization has not been confirmed. No dataset binaries are stored in this Git repository.
+The public release is titled **CCF AIOps Challenge 2026 - Phase Two Dataset** and uses tag `phase-two-v1.0`. Its two ZIP parts and checksum manifest are hosted as Release assets. No dataset binaries are stored in this Git repository.

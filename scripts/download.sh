@@ -16,13 +16,13 @@ mkdir -p "$dest"
 dest=$(cd "$dest" && pwd)
 base_url="https://github.com/$repo/releases/download/$tag"
 
-curl -fL --retry 3 --retry-delay 2 -o "$dest/SHA256SUMS" "$base_url/SHA256SUMS"
+curl -fL --connect-timeout 30 --speed-time 120 --speed-limit 1024 --retry 5 --retry-delay 2 --retry-all-errors -o "$dest/SHA256SUMS" "$base_url/SHA256SUMS"
 found=0
 while IFS= read -r name; do
   [[ -n "$name" ]] || continue
   found=$((found + 1))
   echo "Downloading $name"
-  curl -fL --retry 3 --retry-delay 2 -o "$dest/$name" "$base_url/$name"
+  curl -fL --connect-timeout 30 --speed-time 120 --speed-limit 1024 --retry 5 --retry-delay 2 --retry-all-errors -o "$dest/$name" "$base_url/$name"
 done < <(awk '$2 ~ /\.zip\.part-[0-9][0-9]$/ { print $2 }' "$dest/SHA256SUMS")
 
 if [[ $found -eq 0 ]]; then
